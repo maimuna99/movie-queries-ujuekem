@@ -97,12 +97,12 @@ watch(filterTitle, (newValue) => {
 </script>
 
 <template>
-  <input type="number" v-model="itemsPerPage" /> <br/>
+  Movies per page: <input type="number" v-model="itemsPerPage" /> <br/>
   filter avergage score: {{ filterMoviesAverageScore }}<br/>
   current page avg score: {{currentPageMoviesAverageScore}}<br/>
   total avg score: {{ totalAverageScore }}<br/>
   <ul>
-    <li
+    <li class="card"
       v-for="movie in moviesSnapshot"
       :key="movie.id"
     >
@@ -143,3 +143,12 @@ watch(filterTitle, (newValue) => {
       <option>2022</option>
     </select>
 </template>
+<style scoped>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0.2,0.2,0.2,0.2);
+  transition: 0.3s;
+  width: 22rem;
+  padding:2rem;
+  
+}
+</style>
