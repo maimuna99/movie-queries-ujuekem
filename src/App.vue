@@ -106,7 +106,8 @@ watch(filterTitle, (newValue) => {
       v-for="movie in moviesSnapshot"
       :key="movie.id"
     >
-      {{ movie.title }} || {{ movie.year }} || {{ movie.score }}
+      <b>Movie Title: {{ movie.title }} </b><hr/>
+      <p>Movie Year: {{ movie.year }} <br/>Movie Score: {{ movie.score }}</p>
     </li>
   </ul>
   <h3>Pagination Controls</h3>
@@ -149,6 +150,6 @@ watch(filterTitle, (newValue) => {
   transition: 0.3s;
   width: 22rem;
   padding:2rem;
-  
+  border-radius: 15px;
 }
 </style>
