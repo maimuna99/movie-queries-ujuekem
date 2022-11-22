@@ -97,7 +97,7 @@ watch(filterTitle, (newValue) => {
 </script>
 
 <template>
-  Movies per page: <input type="number" v-model="itemsPerPage" /> <br/>
+  <b>Movies per page:</b> <input type="number" v-model="itemsPerPage" /> <br/>
   filter avergage score: {{ filterMoviesAverageScore }}<br/>
   current page avg score: {{currentPageMoviesAverageScore}}<br/>
   total avg score: {{ totalAverageScore }}<br/>
@@ -111,27 +111,27 @@ watch(filterTitle, (newValue) => {
     </li>
   </ul>
   <h3>Pagination Controls</h3>
-  <MyButton
+  <MyButton style=" border-radius: 25px; background-color:blue; color: white"
     :disabled="page === 1"
     @click="page = 1">
     first page
   </MyButton>
-  <MyButton
+  <MyButton style=" border-radius: 25px; background-color:blue; color: white"
     :disabled="page === 1"
     @click="goToPrev">
     &lt;
   </MyButton>
   {{ page }} / {{ totalPages }}
-  <MyButton
+  <MyButton style=" border-radius: 25px; background-color:blue; color: white"
   :disabled="page === totalPages"
   @click="goToNext">
     &gt;
   </MyButton>
-  <MyButton
+  <MyButton style=" border-radius: 25px; background-color:blue; color: white"
     :disabled="page === totalPages"
     @click="page = totalPages">
     last page
-  </MyButton>
+  </MyButton >
 
   <hr />
   <h3>Filters</h3>
@@ -149,7 +149,9 @@ watch(filterTitle, (newValue) => {
   box-shadow: 0 4px 8px 0 rgba(0.2,0.2,0.2,0.2);
   transition: 0.3s;
   width: 22rem;
-  padding:2rem;
+  padding:1rem;
+  margin:10px;
   border-radius: 15px;
+  background-color: #FAFBFF;
 }
 </style>
